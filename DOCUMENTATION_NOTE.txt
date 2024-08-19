@@ -1,0 +1,12 @@
+
+This project includes the following key features:
+- **JWT-based Authentication**: A middleware (`authMiddleware.js`) to protect specific routes.
+- **Enhanced Validation**: Advanced validation rules are implemented in the `validateInput.js` middleware, ensuring date logic and phone number format are correct.
+- **Modular Structure**: The project is organized into separate modules, improving maintainability.
+
+**Next Steps:**
+- Integrate the `authMiddleware.js` into the routes you want to protect.
+- Apply the `validateInput.js` middleware to the relevant endpoints.
+- Consider using Swagger for detailed API documentation.
+
+Please ensure to replace 'your_jwt_secret_key' with your actual secret key used for signing JWT tokens.
