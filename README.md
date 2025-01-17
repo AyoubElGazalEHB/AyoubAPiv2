@@ -55,6 +55,10 @@ To run the project locally, follow these steps:
 3. Set up a MongoDB database and update the connection string in the code.
 4. Run the application using `npm start`.
 
+## Acknowledgments
+**Instructor’s Approval:** This project builds upon my previous year’s work, with explicit permission from my instructor to improve and submit it again for this academic year.
+
+
 ## GitHub Repository
 
 Find the project on GitHub: [AyoubAPI Repository](https://github.com/AyoubElGazalEHB/AyoubAPiv2.git)
