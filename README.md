@@ -106,17 +106,25 @@ Complete API documentation is available at the root URL when the server is runni
 - `PUT /api/v1/products/:id` - Update product (protected)
 - `DELETE /api/v1/products/:id` - Delete product (protected)
 
+## Sources and References
+
+- **Express.js Documentation:** https://expressjs.com/
+- **MongoDB Documentation:** https://docs.mongodb.com/
+- **Mongoose Documentation:** https://mongoosejs.com/
+- **JWT Documentation:** https://jwt.io/
+- **bcryptjs Documentation:** https://www.npmjs.com/package/bcryptjs
+- **Validator.js Documentation:** https://github.com/validatorjs/validator.js
+- **Node.js Best Practices:** https://github.com/goldbergyoni/nodebestpractices
+- **ChatGPT:** Used for code structure guidance, and implementation assistance
+
 ## Acknowledgments
 **Instructor’s Approval:** This project builds upon my previous year’s work, with explicit permission from my instructor to improve and submit it again for this academic year.
+
 
 
 ## GitHub Repository
 
 Find the project on GitHub: [AyoubAPI Repository](https://github.com/AyoubElGazalEHB/AyoubAPiv2.git)
-
-## Documentation
-
-Detailed API documentation is provided in the `API_DOCUMENTATION.md` file included in the project.
 
 ---
 
