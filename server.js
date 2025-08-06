@@ -6,6 +6,8 @@ const rateLimit = require('express-rate-limit');
 const connectDB = require('./config/database');
 const userRoutes = require('./routes/userRoutes');
 const productRoutes = require('./routes/productRoutes');
+const authRoutes = require('./routes/authRoutes');
+const authRoutes = require('./routes/authRoutes');
 
 const app = express();
 
@@ -48,6 +50,47 @@ app.get('/', (req, res) => {
         <body>
             <h1>🚀 Ayoub API v2 - Complete Documentation</h1>
             <p>Advanced Node.js API with Users and Products management, featuring CRUD operations, authentication, and advanced search capabilities.</p>
+
+            <h2>🔐 Authentication Endpoints</h2>
+
+            <div class="endpoint">
+                <span class="method post">POST</span> <code>/api/v1/auth/register</code>
+                <p><strong>Description:</strong> Register a new user account</p>
+                <p><strong>Required Fields:</strong> firstName, lastName, email, password, phone, dateOfBirth</p>
+                <p><strong>Returns:</strong> User data and JWT token</p>
+            </div>
+
+            <div class="endpoint">
+                <span class="method post">POST</span> <code>/api/v1/auth/login</code>
+                <p><strong>Description:</strong> Login with email and password</p>
+                <p><strong>Required Fields:</strong> email, password</p>
+                <p><strong>Returns:</strong> User data and JWT token</p>
+            </div>
+
+            <div class="endpoint">
+                <span class="method get">GET</span> <code>/api/v1/auth/profile</code>
+                <p><strong>Description:</strong> Get current user profile (requires authentication)</p>
+                <p><strong>Headers:</strong> Authorization: Bearer &lt;token&gt;</p>
+            </div>
+
+            <div class="endpoint">
+                <span class="method put">PUT</span> <code>/api/v1/auth/profile</code>
+                <p><strong>Description:</strong> Update current user profile (requires authentication)</p>
+                <p><strong>Headers:</strong> Authorization: Bearer &lt;token&gt;</p>
+            </div>
+
+            <div class="endpoint">
+                <span class="method put">PUT</span> <code>/api/v1/auth/change-password</code>
+                <p><strong>Description:</strong> Change user password (requires authentication)</p>
+                <p><strong>Required Fields:</strong> currentPassword, newPassword</p>
+                <p><strong>Headers:</strong> Authorization: Bearer &lt;token&gt;</p>
+            </div>
+
+            <div class="endpoint">
+                <span class="method delete">DELETE</span> <code>/api/v1/auth/deactivate</code>
+                <p><strong>Description:</strong> Deactivate user account (requires authentication)</p>
+                <p><strong>Headers:</strong> Authorization: Bearer &lt;token&gt;</p>
+            </div>
 
             <h2>👥 User Endpoints</h2>
 
@@ -176,6 +219,7 @@ app.get('/', (req, res) => {
     `);
 });
 
+app.use('/api/v1/auth', authRoutes);
 app.use('/api/v1/users', userRoutes);
 app.use('/api/v1/products', productRoutes);
 
